@@ -137,6 +137,23 @@
     </footer>
   </div>
 
+  <div class="modal" id="catModal" role="dialog" aria-modal="true" aria-label="Shop cat photos" hidden>
+    <div class="modalCard">
+      <div class="modalTop">
+        <div class="modalTitle">shop cat gallery</div>
+        <button class="modalClose" id="catClose" type="button" aria-label="Close">×</button>
+      </div>
+      <div class="grid">
+        <img src="assets/cat.jpg" alt="Shop cat" loading="lazy" />
+        <img src="assets/cat.jpg" alt="Shop cat" loading="lazy" />
+        <img src="assets/cat.jpg" alt="Shop cat" loading="lazy" />
+        <img src="assets/cat.jpg" alt="Shop cat" loading="lazy" />
+      </div>
+      <div class="modalHint">click outside (or press Esc) to return to your sock destiny</div>
+    </div>
+  </div>
+
+
   <script>
     const blessings = [
       "May your yarn never split and your cat nap elsewhere.",
@@ -176,8 +193,8 @@
         needles: pick(["DPNs", "magic loop", "two circulars", "whatever you found on the couch"])
       };
 
-      title.textContent = `Pattern:   sock`;
-      body.textContent = `Yarn: . Needles: . Cuff: . Heel: . Toe: . Gauge: vibes. Adjustments: yes.`;
+      title.textContent = `Pattern: ${pat.motif} ${pat.size} sock`;
+      body.textContent = `Yarn: ${pat.yarn}. Needles: ${pat.needles}. Cuff: ${pat.cuff}. Heel: ${pat.heel}. Toe: ${pat.toe}. Gauge: vibes. Adjustments: yes.`;
     }
   
 
@@ -202,22 +219,6 @@
       if (e.key === 'Escape') closeCatModal();
     });
   </script>
-
-  <div class="modal" id="catModal" role="dialog" aria-modal="true" aria-label="Shop cat photos" hidden>
-    <div class="modalCard">
-      <div class="modalTop">
-        <div class="modalTitle">shop cat gallery</div>
-        <button class="modalClose" id="catClose" type="button" aria-label="Close">×</button>
-      </div>
-      <div class="grid">
-        <img src="assets/cat.jpg" alt="Cat photo" loading="lazy" />
-        <img src="assets/cat.jpg" alt="Kitten photo" loading="lazy" />
-        <img src="assets/cat.jpg" alt="Sleepy cat" loading="lazy" />
-        <img src="assets/cat.jpg" alt="Ginger cat" loading="lazy" />
-      </div>
-      <div class="modalHint">click outside (or press Esc) to return to your sock destiny</div>
-    </div>
-  </div>
 
 </body>
 </html>
