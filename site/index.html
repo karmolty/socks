@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Socks.</title>
+  <style>
+    :root { --bg:#fffdf8; --ink:#121212; --muted:#6a6a6a; --line:#ece7df; }
+    body { margin:0; background:var(--bg); color:var(--ink); font-family: ui-serif, Georgia, "Times New Roman", Times, serif; }
+    .wrap { max-width: 820px; margin: 0 auto; padding: 44px 18px 70px; }
+    h1 { margin: 0 0 10px; font-size: clamp(44px, 6vw, 76px); letter-spacing: -0.03em; }
+    .tag { margin: 0 0 28px; color: var(--muted); font-size: 18px; }
+    .box { border-top: 1px solid var(--line); padding: 22px 0; }
+    .kicker { text-transform: uppercase; letter-spacing: .14em; font-size: 12px; color: var(--muted); font-weight: 700; }
+    .big { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; font-weight: 900; letter-spacing: -0.02em; font-size: clamp(26px, 3vw, 34px); margin: 10px 0 8px; }
+    p { margin: 0; line-height: 1.45; font-size: 18px; }
+    ul { margin: 12px 0 0 18px; font-size: 18px; }
+    li { margin: 6px 0; }
+    .btn {
+      display:inline-block; margin-top: 14px; padding: 10px 14px;
+      border: 1px solid var(--ink); border-radius: 10px;
+      font-family: ui-sans-serif, system-ui; font-weight: 800; text-decoration:none; color: var(--ink);
+      background: #fff;
+    }
+    .btn:active { transform: translateY(1px); }
+    footer { border-top: 1px solid var(--line); margin-top: 26px; padding-top: 14px; color: var(--muted); font-size: 13px; font-family: ui-sans-serif, system-ui; }
+    .tiny { font-size: 13px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Socks.</h1>
+    <p class="tag">A knitting website for people who looked at yarn and said, “what if my feet had lore?”</p>
+
+    <div class="box">
+      <div class="kicker">Today’s sermon</div>
+      <div class="big">Gauge is a suggestion. Confidence is mandatory.</div>
+      <p>
+        Welcome to the internet’s least qualified sock authority. We believe in:
+      </p>
+      <ul>
+        <li>doing the heel turn even when you’re not emotionally ready</li>
+        <li>using stitch markers as tiny emotional support animals</li>
+        <li>pretending you meant to make them “asymmetrical”</li>
+      </ul>
+    </div>
+
+    <div class="box">
+      <div class="kicker">Sock horoscope</div>
+      <div class="big">You will find the missing DPN in the last place you look.</div>
+      <p class="tiny">(Because you will stop looking. This is how prophecies work.)</p>
+      <a class="btn" href="#" onclick="randomBlessing(); return false;">Give me a new sock blessing</a>
+    </div>
+
+    <div class="box">
+      <div class="kicker">Pattern disclaimer</div>
+      <div class="big">If you can read this, you can knit this.</div>
+      <p>
+        Step 1: cast on. Step 2: knit. Step 3: question every life choice. Step 4: sock.
+      </p>
+    </div>
+
+    <footer>
+      <div>Made with yarn, hubris, and mild confusion.</div>
+      <div class="tiny">P.S. if anyone asks, they’re “handcrafted heirloom foot tubes.”</div>
+    </footer>
+  </div>
+
+  <script>
+    const blessings = [
+      "May your yarn never split and your cat nap elsewhere.",
+      "May your second sock be as motivated as your first sock.",
+      "May your heel flap be straight and your life be straighter than that.",
+      "May your weave-in ends be short, but not spiritually short.",
+      "May your tension be consistent, unlike your sleep schedule.",
+      "May the sock blockers forgive your crimes.",
+      "May your frogging be swift and emotionally sustainable.",
+      "May your colorwork floats remain polite and drama-free."
+    ];
+
+    function randomBlessing() {
+      const el = document.querySelector('.box:nth-of-type(2) .big');
+      const i = Math.floor(Math.random() * blessings.length);
+      el.textContent = blessings[i];
+    }
+  </script>
+</body>
+</html>
