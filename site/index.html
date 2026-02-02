@@ -11,7 +11,8 @@
     h1 { margin: 0 0 10px; font-size: clamp(44px, 6vw, 76px); letter-spacing: -0.03em; }
     .tag { margin: 0 0 28px; color: var(--muted); font-size: 18px; }
     .box { border-top: 1px solid var(--line); padding: 22px 0; }
-    .kicker { text-transform: uppercase; letter-spacing: .14em; font-size: 12px; color: var(--muted); font-weight: 700; }
+    .kicker { display:flex; gap:10px; align-items:center; text-transform: uppercase; letter-spacing: .14em; font-size: 12px; color: var(--muted); font-weight: 700; }
+    .ico { width:18px; height:18px; flex:0 0 auto; }
     .big { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; font-weight: 900; letter-spacing: -0.02em; font-size: clamp(26px, 3vw, 34px); margin: 10px 0 8px; }
     p { margin: 0; line-height: 1.45; font-size: 18px; }
     ul { margin: 12px 0 0 18px; font-size: 18px; }
@@ -32,8 +33,39 @@
     <h1>Socks.</h1>
     <p class="tag">A knitting website for people who looked at yarn and said, “what if my feet had lore?”</p>
 
+    <div aria-hidden="true" style="margin: 10px 0 26px;">
+  <svg viewBox="0 0 900 140" width="100%" height="140" role="img" aria-label="Yarn and sock doodle" style="display:block;">
+    <defs>
+      <linearGradient id="g" x1="0" x2="1">
+        <stop offset="0" stop-color="#f0b7ff" />
+        <stop offset="1" stop-color="#b7e8ff" />
+      </linearGradient>
+    </defs>
+    <rect x="0" y="0" width="900" height="140" rx="18" fill="url(#g)" opacity="0.35" />
+
+    <!-- yarn ball -->
+    <circle cx="120" cy="74" r="44" fill="#fff" stroke="#111" stroke-width="3" />
+    <path d="M82 70c22-18 66-22 78 4" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round" />
+    <path d="M88 86c18-10 56-10 70 8" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round" />
+    <path d="M88 54c18-12 52-12 66 6" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round" />
+
+    <!-- yarn tail -->
+    <path d="M164 80c80 40 140 10 210 28" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round" />
+
+    <!-- sock -->
+    <path d="M650 38h70v52c0 24-20 40-48 40h-56c-18 0-32-12-32-26 0-14 10-24 26-24h40c18 0 28-10 28-26V38z"
+          fill="#fff" stroke="#111" stroke-width="3" stroke-linejoin="round" />
+    <path d="M650 60h70" stroke="#111" stroke-width="3" stroke-linecap="round" />
+
+    <!-- needles -->
+    <path d="M720 38L850 10" stroke="#111" stroke-width="3" stroke-linecap="round" />
+    <path d="M720 52L854 30" stroke="#111" stroke-width="3" stroke-linecap="round" />
+
+    <text x="240" y="86" font-family="ui-sans-serif, system-ui" font-size="34" font-weight="900" fill="#111">cozy, minimal sock prophecy</text>
+  </svg>
+</div>
     <div class="box">
-      <div class="kicker">Today’s sermon</div>
+      <div class="kicker"><svg class="ico" viewBox="0 0 64 64" aria-hidden="true"><circle cx="28" cy="34" r="18" fill="#fff" stroke="#111" stroke-width="3"/><path d="M14 34c10-10 30-10 34 2" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round"/><path d="M18 44c8-6 24-6 28 4" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round"/><path d="M40 40c10 6 14 10 20 10" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round"/></svg><span>Today’s sermon</span></div>
       <div class="big">Gauge is a suggestion. Confidence is mandatory.</div>
       <p>
         Welcome to the internet’s least qualified sock authority. We believe in:
@@ -46,14 +78,14 @@
     </div>
 
     <div class="box">
-      <div class="kicker">Sock horoscope</div>
+      <div class="kicker"><svg class="ico" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 6l8 18 20 2-15 13 5 19-18-10-18 10 5-19L4 26l20-2z" fill="#fff" stroke="#111" stroke-width="3" stroke-linejoin="round"/></svg><span>Sock horoscope</span></div>
       <div class="big">You will find the missing DPN in the last place you look.</div>
       <p class="tiny">(Because you will stop looking. This is how prophecies work.)</p>
       <a class="btn" href="#" onclick="randomBlessing(); return false;">Give me a new sock blessing</a>
     </div>
 
     <div class="box">
-      <div class="kicker">Sock pattern generator</div>
+      <div class="kicker"><svg class="ico" viewBox="0 0 64 64" aria-hidden="true"><path d="M36 6h16v20c0 12-10 20-22 20H16c-8 0-14-6-14-12s5-10 12-10h16c8 0 10-6 10-12V6z" fill="#fff" stroke="#111" stroke-width="3" stroke-linejoin="round"/><path d="M36 16h16" stroke="#111" stroke-width="3" stroke-linecap="round"/></svg><span>Sock pattern generator</span></div>
       <div class="big" id="patternTitle">Click to generate a sock pattern.</div>
       <p id="patternBody">It will be completely untrustworthy, but emotionally supportive.</p>
       <a class="btn" href="#" onclick="generatePattern(); return false;">Generate a sock pattern</a>
