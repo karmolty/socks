@@ -13,6 +13,8 @@
     .box { border-top: 1px solid var(--line); padding: 22px 0; }
     .kicker { display:flex; gap:10px; align-items:center; text-transform: uppercase; letter-spacing: .14em; font-size: 12px; color: var(--muted); font-weight: 700; }
     .ico { width:18px; height:18px; flex:0 0 auto; }
+    .photo { width: 100%; height: auto; display:block; margin: 12px 0 0; border-radius: 14px; border: 1px solid var(--line); box-shadow: 0 10px 30px rgba(0,0,0,.08); }
+    .photoCap { margin-top: 8px; color: var(--muted); font-size: 13px; font-family: ui-sans-serif, system-ui; }
     .big { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; font-weight: 900; letter-spacing: -0.02em; font-size: clamp(26px, 3vw, 34px); margin: 10px 0 8px; }
     p { margin: 0; line-height: 1.45; font-size: 18px; }
     ul { margin: 12px 0 0 18px; font-size: 18px; }
@@ -98,6 +100,8 @@
         <li>using stitch markers as tiny emotional support animals</li>
         <li>pretending you meant to make them “asymmetrical”</li>
       </ul>
+      <img class="photo" src="https://source.unsplash.com/1200x800/?yarn,knitting" alt="Yarn and knitting needles" loading="lazy" />
+      <div class="photoCap">yarn vibes</div>
     </div>
 
     <div class="box">
@@ -111,6 +115,8 @@
       <div class="kicker"><svg class="ico" viewBox="0 0 64 64" aria-hidden="true"><path d="M36 6h16v20c0 12-10 20-22 20H16c-8 0-14-6-14-12s5-10 12-10h16c8 0 10-6 10-12V6z" fill="#fff" stroke="#111" stroke-width="3" stroke-linejoin="round"/><path d="M36 16h16" stroke="#111" stroke-width="3" stroke-linecap="round"/></svg><span>Sock pattern generator</span></div>
       <div class="big" id="patternTitle">Click to generate a sock pattern.</div>
       <p id="patternBody">It will be completely untrustworthy, but emotionally supportive.</p>
+      <img class="photo" src="https://source.unsplash.com/1200x800/?knitted,socks" alt="Hand-knit socks" loading="lazy" />
+      <div class="photoCap">handcrafted heirloom foot tubes</div>
       <a class="btn" href="#" onclick="generatePattern(); return false;">Generate a sock pattern</a>
     </div>
 
