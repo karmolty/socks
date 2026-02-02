@@ -36,7 +36,10 @@
     .modalTitle { font-family: ui-sans-serif, system-ui; font-weight: 900; letter-spacing: -0.02em; }
     .modalClose { font-family: ui-sans-serif, system-ui; font-size: 28px; line-height: 1; border: 0; background: transparent; cursor: pointer; padding: 2px 10px; }
     .grid { display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-    .grid img { width: 100%; height: auto; display:block; border-radius: 14px; }
+    .grid { display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .tile { display:block; text-decoration:none; color: inherit; }
+    .tile img { width: 100%; height: auto; display:block; border-radius: 14px; border: 1px solid var(--line); }
+    .tileCap { margin-top: 6px; color: var(--muted); font-size: 12px; font-family: ui-sans-serif, system-ui; line-height: 1.2; }
     .modalHint { margin-top: 10px; color: var(--muted); font-size: 13px; font-family: ui-sans-serif, system-ui; padding: 0 8px 4px; }
     .wrap { position: relative; }
 
@@ -144,10 +147,22 @@
         <button class="modalClose" id="catClose" type="button" aria-label="Close">×</button>
       </div>
       <div class="grid">
-        <img src="assets/cat1.jpg" alt="Shop cat with yarn" loading="lazy" />
-        <img src="assets/cat2.jpg" alt="Shop cat with yarn" loading="lazy" />
-        <img src="assets/cat3.jpg" alt="Shop cat with yarn" loading="lazy" />
-        <img src="assets/cat4.jpg" alt="Shop cat with yarn" loading="lazy" />
+        <a class="tile" href="https://www.reddit.com/r/OneOrangeBraincell/comments/1qt1e03/general_eisenmeower_likes_to_flop/" target="_blank" rel="noreferrer">
+          <img src="https://a.thumbs.redditmedia.com/UdzfacanhdHpA1vwRoDyvjuWUq6muBkVz9UOpPfYv68.jpg" alt="OneOrangeBrainCell: General Eisenmeower likes to flop." loading="lazy" />
+          <div class="tileCap">r/OneOrangeBrainCell — General Eisenmeower likes to flop.</div>
+        </a>
+        <a class="tile" href="https://www.reddit.com/r/OneOrangeBraincell/comments/1qsyfpj/he_finally_found_the_brain_cell_and_its_made_of/" target="_blank" rel="noreferrer">
+          <img src="https://preview.redd.it/voqbrxj9xvgg1.png?width=320&crop=smart&auto=webp&s=9778601677c666438d078ae0b4ba2cd5985ae7cb" alt="OneOrangeBrainCell: He finally found the brain cell, and it's made of beads" loading="lazy" />
+          <div class="tileCap">r/OneOrangeBrainCell — He finally found the brain cell, and it's made of beads</div>
+        </a>
+        <a class="tile" href="https://www.reddit.com/r/FunnyAnimals/comments/1qss41v/_/" target="_blank" rel="noreferrer">
+          <img src="https://external-preview.redd.it/bnR6ZmYxdDk3dWdnMdeidEgERJE6UMm6x2WHIRwamAR8H6nQQfMnn1BaSrHh.png?width=640&crop=smart&auto=webp&s=34a7417e64f7174aeac22440de56bb836764daed" alt="FunnyAnimals: 🐶🦴" loading="lazy" />
+          <div class="tileCap">r/FunnyAnimals — 🐶🦴</div>
+        </a>
+        <a class="tile" href="https://www.reddit.com/r/FunnyAnimals/comments/1qt6ox8/thats_how_it_really_work/" target="_blank" rel="noreferrer">
+          <img src="https://external-preview.redd.it/a2hzczlsMnBneGdnMRcw5cpGKiWJyX6KhWB80-Bci70Sr2z2XddCVUkkqz0V.png?width=640&crop=smart&auto=webp&s=bbaae96718261646b987c76d541f9b60d46a5670" alt="FunnyAnimals: That's how it really work...." loading="lazy" />
+          <div class="tileCap">r/FunnyAnimals — That's how it really work....</div>
+        </a>
       </div>
       <div class="modalHint">click outside (or press Esc) to return to your sock destiny</div>
     </div>
