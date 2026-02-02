@@ -53,11 +53,10 @@
     </div>
 
     <div class="box">
-      <div class="kicker">Pattern disclaimer</div>
-      <div class="big">If you can read this, you can knit this.</div>
-      <p>
-        Step 1: cast on. Step 2: knit. Step 3: question every life choice. Step 4: sock.
-      </p>
+      <div class="kicker">Sock pattern generator</div>
+      <div class="big" id="patternTitle">Click to generate a sock pattern.</div>
+      <p id="patternBody">It will be completely untrustworthy, but emotionally supportive.</p>
+      <a class="btn" href="#" onclick="generatePattern(); return false;">Generate a sock pattern</a>
     </div>
 
     <footer>
@@ -79,9 +78,34 @@
     ];
 
     function randomBlessing() {
-      const el = document.querySelector('.box:nth-of-type(2) .big');
+      const el = document.querySelector(".box:nth-of-type(2) .big");
       const i = Math.floor(Math.random() * blessings.length);
       el.textContent = blessings[i];
+    }
+
+    const yarns = ["wool", "merino", "mystery stash", "sock yarn with glitter", "the yarn you swore you’d use ‘someday’"];
+    const cuffs = ["1x1 rib", "2x2 rib", "twisted rib (for drama)", "rolled edge (for chaos)"];
+    const heels = ["heel flap", "afterthought heel", "short-row heel", "we’ll deal with it later heel"];
+    const toes = ["Kitchener stitch", "three-needle bind off", "toe-up magic", "toe situation"];
+    const motifs = ["tiny sheep", "angry stripes", "polite cables", "accidental lace", "cat hair couture"];
+
+    function pick(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+
+    function generatePattern() {
+      const title = document.getElementById("patternTitle");
+      const body = document.getElementById("patternBody");
+      const pat = {
+        yarn: pick(yarns),
+        cuff: pick(cuffs),
+        heel: pick(heels),
+        toe: pick(toes),
+        motif: pick(motifs),
+        size: pick(["tiny", "normal", "comically large", "mysteriously specific"]),
+        needles: pick(["DPNs", "magic loop", "two circulars", "whatever you found on the couch"])
+      };
+
+      title.textContent = `Pattern:   sock`;
+      body.textContent = `Yarn: . Needles: . Cuff: . Heel: . Toe: . Gauge: vibes. Adjustments: yes.`;
     }
   </script>
 </body>
